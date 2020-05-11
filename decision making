@@ -1,0 +1,35 @@
+#include<iostream>
+#include<conio.h>
+#include<cstdlib>
+using namespace std;
+
+int main()
+{
+	int age;
+	cout<<"\nplease enter your age: ";
+	cin>>age;
+	if(age>=18)
+	{
+		cout<<"you are eligible to vote!!"<<endl;
+		cout<<"\n\nDo you have a voter ID card? "<<endl;
+		cout<<"enter Y for yes N for no"<<endl;
+		char ch;
+		cin>>ch;
+		if(ch=='Y'||ch=='y')
+		  cout<<"You are a responsible citizen of India!!"<<endl;
+		else if(ch=='N'||ch=='n')
+		  cout<<"please register for your voter ID card soon!!"<<endl;
+		else
+		 {
+		   cout<<"WRONG CHOICE!!"<<endl;
+		   getch();
+		   exit(0);
+	     }
+	}
+	else
+	{
+		cout<<"you are not eligible to vote!!"<<endl;
+		cout<<"\n\nyou will be eligible in "<<(18-age)<<"year(s)"<<endl;
+	}
+	return 0;
+}
